@@ -40,9 +40,9 @@ def login_page(request):
     return render(request, 'authentication/login.html', context={'form': form})
  
 def login(request):
-    con = mysql.connector.connect(host="localhost",user="root",passwd="", database="julanehotel")
+    con = mysql.connector.connect(host="us-cdbr-east-05.cleardb.net",user="ba60681aab06ab",passwd="3dd509bc", database="heroku_88e9d371d2ba68e")
     cursor=con.cursor()
-    con2 = mysql.connector.connect(host="localhost",user="root",passwd="", database="julanehotel")
+    con2 = mysql.connector.connect(host="us-cdbr-east-05.cleardb.net",user="ba60681aab06ab",passwd="3dd509bc", database="heroku_88e9d371d2ba68e")
     cursor2=con2.cursor()
     sqlcommand="SELECT username from julanehotel_customer"
     sqlcommand2="SELECT password from julanehotel_customer"
