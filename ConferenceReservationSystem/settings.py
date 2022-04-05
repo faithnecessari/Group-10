@@ -85,11 +85,11 @@ WSGI_APPLICATION = 'ConferenceReservationSystem.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'JulaneHotel',
-        'USER': 'root',
-        'PASSWORD': '',
-        'HOST': '127.0.0.1',
-        'PORT': '3306',
+        'NAME': 'heroku_88e9d371d2ba68e',
+        'USER': 'ba60681aab06ab',
+        'PASSWORD': '3dd509bc',
+        'HOST': 'us-cdbr-east-05.cleardb.net',
+        #'PORT': '3306',
         'OPTIONS':{
         'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
         }
@@ -143,3 +143,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 # https://docs.djangoproject.com/en/4.0/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+# Activate Django-Heroku.
+django_heroku.settings(locals())
